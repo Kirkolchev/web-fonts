@@ -82,6 +82,161 @@ h6 {
   font-size: inherit;
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 50;
+}
+.header--margin {
+  margin-bottom: 4.375rem;
+}
+.header__container {
+  padding: 13px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+}
+.header__leng {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 82%;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.125rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu__list span {
+  font-weight: 700;
+  font-size: 1.5625rem;
+  margin: 0rem 0.625rem;
+  font-family: "Tourney", sans-serif;
+}
+@media (max-width: 60em) {
+  .menu__list span {
+    display: none;
+  }
+}
+.menu__link {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #000;
+  font-family: "Staatliches", sans-serif;
+}
+
+/* burger */
+@media (max-width: 960px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: -100%;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+    padding: 150px 15px 30px 15px;
+    background-color: rgba(221, 221, 196, 0.5843137255);
+  }
+  .menu-open .menu__body,
+  .menu-open .menu__body::before {
+    left: 0;
+  }
+  .menu .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+    row-gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu .menu__link {
+    font-size: 28px;
+    color: #3c4242;
+  }
+  .icon-menu {
+    width: 30px;
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+  }
+  .icon-menu::before,
+  .icon-menu::after,
+  .icon-menu span {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #000;
+  }
+  .icon-menu::before {
+    top: 0;
+  }
+  .icon-menu::after {
+    bottom: 0;
+  }
+  .icon-menu span {
+    top: 50%;
+    margin-top: -1px;
+  }
+  .menu-open .icon-menu span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  .menu-open .icon-menu::before {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 50%;
+    margin-top: -1px;
+  }
+  .menu-open .icon-menu::after {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: 50%;
+    margin-bottom: -1px;
+  }
+  .hero__action {
+    gap: 10px;
+  }
+  .hero__action .hero__button {
+    padding: 10px 20px;
+  }
+}
+/* burger */
 body {
   color: #000000;
 }
@@ -147,9 +302,54 @@ body.menu-open {
           column-gap: 10px;
 }
 
+.fonts {
+  background: url("../assets/img/decor.svg") no-repeat 100% 9.375rem;
+  background-attachment: fixed;
+}
+.fonts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .fonts__container > *:not(:last-child) {
   margin-bottom: 4.375rem;
 }
+.fonts__content {
+  padding-left: 1.875rem;
+}
+.saidbar {
+  position: sticky;
+  left: 0;
+  top: 9.375rem;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.saidbar__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 4.375rem;
+}
+.saidbar__item {
+  border-bottom: 1px solid #bdbdbd;
+}
+.saidbar__link {
+  font-family: "Francois One", sans-serif;
+  font-size: 36px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000;
+}
+
 .introduction__title::after {
   display: -webkit-box;
   display: -ms-flexbox;

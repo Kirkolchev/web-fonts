@@ -77,19 +77,63 @@ body {
 	}
 }
 .fonts {
+	background: url("../assets/img/decor.svg") no-repeat 100% toRem(150);
+	background-attachment: fixed;
 	// .fonts__container
-
 	&__container {
+		display: flex;
 		& > *:not(:last-child) {
 			margin-bottom: toRem(70);
 		}
 	}
 
+	&__content {
+		padding-left: toRem(30);
+	}
 	// .fonts__item
 
 	&__item {
 	}
 }
+
+.saidbar {
+	position: sticky;
+	left: 0;
+	top: toRem(150);
+
+	height: 100%;
+	flex-shrink: 0;
+	flex-grow: 1;
+	// .saidbar__list
+	&__list {
+	}
+
+	// .saidbar__items
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(70);
+	}
+
+	// .saidbar__item
+
+	&__item {
+		border-bottom: 1px solid #bdbdbd;
+	}
+
+	// .saidbar__link
+
+	&__link {
+		font-family: "Francois One", sans-serif;
+		font-size: 36px;
+		line-height: 133%;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #000;
+	}
+}
+
 .introduction {
 	// .introduction__title
 
