@@ -303,7 +303,7 @@ body.menu-open {
 }
 
 .fonts {
-  background: url("../assets/img/decor.svg") no-repeat 100% 9.375rem;
+  background: url("../assets/img/decor.svg") no-repeat 90% 9.375rem;
   background-attachment: fixed;
 }
 .fonts__container {
